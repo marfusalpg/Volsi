@@ -1,97 +1,118 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volsi | Moderní weby od studentů</title>
-    <link rel="stylesheet" href="style-index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-     <link rel="icon" href="img/Web_icon.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volsi | Prémiová tvorba webů</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Volsi<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="#o-nas">Služby</a></li>
-                <li><a href="#tym">O nás</a></li>
-                <li><a href="#">Reference</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
+
+<header class="navbar">
+  <div class="container navbar-inner">
+    <a href="#" class="logo">Volsi<span>.</span></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#o-nas">O nás</a></li>
+        <li><a href="#sluzby">Služby</a></li>
+        <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
+      </ul>
     </nav>
+  </div>
+</header>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Tvoříme weby, které <span class="purple-text">dávají smysl</span>.</h1>
-            <p>Jsme studenti informatiky z UPOLu. Hledáme zkušenosti, vy dostanete špičkový web za <span class="purple-text">zlomek ceny.</span></p>
-            <a href="#o-nas" class="btn">Zjistit více</a>
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Tvoříme weby, které <span class="text-gradient">vyčnívají z davu</span></h1>
+      <p class="hero-subtitle">Jsme tři studenti s vášní pro kód a design. Spojujeme moderní technologie s osobním přístupem, abychom váš projekt posunuli na další úroveň.</p>
+      <div class="hero-buttons">
+        <a href="#kontakt" class="btn btn-primary">Zahájit projekt</a>
+        <a href="#o-nas" class="btn btn-secondary">Zjistit více</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-nas" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>Kvalita agentury, <br><span class="text-gradient">přístup kamarádů</span></h2>
+          <p>Zapomeňte na zdlouhavé procesy a anonymní korporátní komunikaci. Záleží nám na každém detailu, protože vaše úspěšná prezentace je i naší vizitkou. Sledujeme nejnovější trendy, abychom vám dodali web, který je nejen hezký, ale hlavně rychlý a funkční.</p>
         </div>
-    </header>
-
-    <section id="o-nas" class="section">
-        <div class="container">
-            <h2>Co děláme?</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Weby na zakázku</h3>
-                    <p>Děláme levné, ale kvalitní weby pro firmy i jednotlivce. Každý projekt je pro nás výzva.</p>
-                </div>
-                <div class="card">
-                    <h3>Studentský přístup</h3>
-                    <p>Nejsme korporát. Jsme flexibilní, draví a do každého kódu dáváme maximum úsilí.</p>
-                </div>
-                <div class="card">
-                    <h3>Skvělá cena</h3>
-                    <p>Jelikož sbíráme zkušenosti do portfolia, nabízíme ceny, kterým profi agentury nemohou konkurovat.</p>
-                </div>
-            </div>
-            
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="avatar"></div>
+            <h3>Člen 1</h3>
+            <p>Vývojář</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar"></div>
+            <h3>Člen 2</h3>
+            <p>Designér</p>
+          </div>
+          <div class="team-card">
+            <div class="avatar"></div>
+            <h3>Člen 3</h3>
+            <p>Kreativec</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="tym" class="section alt-bg">
-        <div class="container">
-            <h2>Náš tým</h2>
-            <p class="subtitle">Jsme tři studenti informatiky na Přírodovědecké fakultě UPOL. Jsme pečliví, pracovití a hlavně přátelští.</p>
-            <div class="team-grid">
-                <div class="member">
-                    <div class="avatar">MV</div>
-                    <h3>Martin Voltner</h3>
-                </div>
-                <div class="member">
-                    <div class="avatar">OS</div>
-                    <h3>Ondřej Siuda</h3>
-                </div>
-                <div class="member">
-                    <div class="avatar">ML</div>
-                    <h3>Matěj Loun</h3>
-                </div>
-            </div>
+  <section id="sluzby" class="services">
+    <div class="container">
+      <h2 class="section-title">Co přesně děláme</h2>
+      <div class="services-grid">
+        <div class="service-box">
+          <div class="service-icon">✦</div>
+          <h3>Moderní vizitky</h3>
+          <p>Rychlé, elegantní a responzivní weby, které vás budou perfektně reprezentovat před klienty.</p>
         </div>
-    </section>
-
-    <section id="kontakt" class="section">
-        <div class="container">
-            <h2>Kontaktujte nás</h2>
-            <div class="contact-box">
-                <p>Máte nápad na projekt? Pojďme ho probrat u kafe (nebo u kódu).</p>
-                <p>📧 <strong>email:</strong> info@volsi.cz</p>
-                <p>📍 <strong>Kde nás najdete:</strong> PřF UPOL, Olomouc</p>
-            </div>
+        <div class="service-box">
+          <div class="service-icon">⚡</div>
+          <h3>E-commerce</h3>
+          <p>Stavíme e-shopy, ve kterých se zákazníci neztratí a které reálně zvyšují vaše prodeje.</p>
         </div>
-    </section>
+        <div class="service-box">
+          <div class="service-icon">🚀</div>
+          <h3>Webové aplikace</h3>
+          <p>Máte složitější nápad? Naprogramujeme vám aplikaci na míru přesně podle vašich požadavků.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 Volsi | Všechna práva vyhrazena  </p>
-        <p class="Design-by">Webdesign by Martin Voltner</p>
-    </footer>
+  <section id="kontakt" class="contact">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <h2>Pojďme vytvořit něco <span class="text-gradient">skvělého</span></h2>
+        <p>Napište nám o svém projektu a my se vám obratem ozveme s návrhem řešení.</p>
+      </div>
+      <form class="contact-form">
+        <div class="input-group">
+          <input type="text" placeholder="Jméno a příjmení" required>
+        </div>
+        <div class="input-group">
+          <input type="email" placeholder="E-mailová adresa" required>
+        </div>
+        <div class="input-group">
+          <textarea placeholder="Popište nám svůj nápad..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Odeslat poptávku</button>
+      </form>
+    </div>
+  </section>
+</main>
 
-    <script src="script.js"></script>
+<footer>
+  <div class="container footer-inner">
+    <div class="footer-logo">Volsi<span>.</span></div>
+    <p>&copy; 2026 Volsi. Tvořeno s vášní pro web.</p>
+  </div>
+</footer>
+
 </body>
 </html>
