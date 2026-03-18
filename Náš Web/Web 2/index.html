@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Volsi | Moderní weby od studentů</title>
-        <link rel="stylesheet" href="style-index.css">
+        <title>Volsi | Tvorba webů na zakázku</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
             rel="stylesheet">
-        <link rel="icon" href="img/Web_icon.png" type="image/png">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
 
+        <nav class="navbar">
+            <div class="logo">Volsi<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#domu">Domů</a></li>
+                <li><a href="#o-nas">O nás</a></li>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#kontakt" class="nav-btn">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+
+        <header id="domu" class="hero fade-in">
+            <div class="hero-content">
+                <h1>Děláme weby <br><span>na zakázku</span></h1>
+                <p>Za slušnou cenu. Moderně, čistě a na míru vašim potřebám.</p>
+                <a href="https://www.flaticon.com/free-stickers/coding"
+                    title="coding stickers">Coding stickers created by
+                    kerismaker - Flaticon</a>
+                <a href="#kontakt" class="btn">Chci vlastní web</a>
+            </div>
+        </header>
+
+        <section id="o-nas" class="about fade-in">
+            <div class="container">
+                <h2>Kdo jsme?</h2>
+                <p>Jsme 3 studenti z informatiky UPOL v Olomouci. Tvorba
+                    webových stránek nás baví a věnujeme se jí s maximálním
+                    nasazením. </p>
+                <p><strong>Proč to děláme?</strong> Hlavně pro reálné
+                    zkušenosti, rozšiřování portfolia a budování cenných
+                    kontaktů. Díky tomu vám můžeme nabídnout moderní webové
+                    řešení za velmi přátelskou studentskou cenu pod hlavičkou
+                    Volsi.</p>
+            </div>
+        </section>
+
+        <footer id="kontakt" class="fade-in">
+            <div class="container">
+                <h2>Pojďme do toho</h2>
+                <p>Máte nápad? Napište nám a domluvíme se na podrobnostech
+                    (třeba i na kávu někde v centru Olomouce).</p>
+                <a href="mailto:vas-email@upol.cz"
+                    class="btn btn-outline">Napsat e-mail</a>
+                <div class="copyright">
+                    &copy; 2026 Volsi. Vytvořeno s vášní pro kód.
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
