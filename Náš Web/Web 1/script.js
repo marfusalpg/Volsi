@@ -2,6 +2,7 @@
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
+const preloader = document.getElementById('preloader');
 
 let lastScrollTop = 0;
 
@@ -9,8 +10,9 @@ let lastScrollTop = 0;
 
 // Přepínání menu (Hamburger -> Křížek)
 mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('is-active');
+    const isActive = mobileMenu.classList.toggle('is-active');
     navLinks.classList.toggle('active');
+    mobileMenu.setAttribute('aria-expanded', isActive ? 'true' : 'false');
 });
 
 // Zavření menu po kliknutí na odkaz (aby nezůstalo viset přes obsah)
@@ -85,5 +87,14 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         navLinks.classList.remove('active');
         mobileMenu.classList.remove('is-active');
+        mobileMenu.setAttribute('aria-expanded', 'false');
     }
+});
+
+window.addEventListener('load', () => {
+    if (!preloader) return;
+    preloader.classList.add('loaded');
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 600);
 });

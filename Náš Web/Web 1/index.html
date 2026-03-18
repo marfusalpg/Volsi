@@ -1,118 +1,152 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volsi | Prémiová tvorba webů</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volsi | Prémiová tvorba webů</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet">
+  </head>
+  <body>
 
-<header class="navbar">
-  <div class="container navbar-inner">
-    <a href="#" class="logo">Volsi<span>.</span></a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#o-nas">O nás</a></li>
-        <li><a href="#sluzby">Služby</a></li>
-        <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <h1 class="hero-title">Tvoříme weby, které <span class="text-gradient">vyčnívají z davu</span></h1>
-      <p class="hero-subtitle">Jsme tři studenti s vášní pro kód a design. Spojujeme moderní technologie s osobním přístupem, abychom váš projekt posunuli na další úroveň.</p>
-      <div class="hero-buttons">
-        <a href="#kontakt" class="btn btn-primary">Zahájit projekt</a>
-        <a href="#o-nas" class="btn btn-secondary">Zjistit více</a>
-      </div>
+    <div id="preloader" class="preloader" aria-hidden="true">
+      <div class="spinner"></div>
     </div>
-  </section>
 
-  <section id="o-nas" class="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-content">
-          <h2>Kvalita agentury, <br><span class="text-gradient">přístup kamarádů</span></h2>
-          <p>Zapomeňte na zdlouhavé procesy a anonymní korporátní komunikaci. Záleží nám na každém detailu, protože vaše úspěšná prezentace je i naší vizitkou. Sledujeme nejnovější trendy, abychom vám dodali web, který je nejen hezký, ale hlavně rychlý a funkční.</p>
-        </div>
-        <div class="team-cards">
-          <div class="team-card">
-            <div class="avatar"></div>
-            <h3>Člen 1</h3>
-            <p>Vývojář</p>
-          </div>
-          <div class="team-card">
-            <div class="avatar"></div>
-            <h3>Člen 2</h3>
-            <p>Designér</p>
-          </div>
-          <div class="team-card">
-            <div class="avatar"></div>
-            <h3>Člen 3</h3>
-            <p>Kreativec</p>
+    <header class="navbar">
+      <div class="container navbar-inner">
+        <a href="#" class="logo">Volsi<span>.</span></a>
+        <button id="mobile-menu" class="mobile-menu" aria-label="Toggle menu"
+          aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#o-nas">O nás</a></li>
+            <li><a href="#sluzby">Služby</a></li>
+            <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero-title">Tvoříme weby, které <span
+              class="text-gradient">vyčnívají z davu</span></h1>
+          <p class="hero-subtitle">Jsme tři studenti s vášní pro kód a design.
+            Spojujeme moderní technologie s osobním přístupem, abychom váš
+            projekt posunuli na další úroveň.</p>
+          <div class="hero-buttons">
+            <a href="#kontakt" class="btn btn-primary">Zahájit projekt</a>
+            <a href="#o-nas" class="btn btn-secondary">Zjistit více</a>
           </div>
         </div>
+      </section>
+
+      <section id="o-nas" class="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-content">
+              <h2>Profesionální výsledky,<br><span class="text-gradient">přístup
+                  kamarádů</span></h2>
+              <p>Zapomeňte na zdlouhavé procesy a anonymní korporátní přístup.
+                Jsme studenti, co weby umí dělat rychle, efektivně a za rozumnou
+                cenu. Každý detail je pro nás důležitý – váš úspěch je i naší
+                vizitkou. Sledujeme nejnovější trendy, abychom vám dodali web,
+                který nejen hezky vypadá, ale hlavně funguje a načítá se rychle.
+                Ať už potřebujete nový web, nebo jen opravit ten stávající, jsme
+                tu, abychom vám pomohli jednoduše a bez zbytečných
+                komplikací.</p>
+            </div>
+            <div class="team-cards">
+              <div class="team-card">
+                <div class="avatar"></div>
+                <h3>Martin Voltner</h3>
+                <p>Back-End Developer</p>
+                <p>Designér</p>
+              </div>
+              <div class="team-card">
+                <div class="avatar"></div>
+                <h3>Ondřej Siuda</h3>
+                <p>Front-end Developer</p>
+                <p>Komunikace</p>
+              </div>
+              <div class="team-card">
+                <div class="avatar"></div>
+                <h3>Člen 3</h3>
+                <p>Back-end Developer</p>
+                <p>Komunikace</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sluzby" class="services">
+        <div class="container">
+          <h2 class="section-title">Co přesně děláme</h2>
+          <div class="services-grid">
+            <div class="service-box">
+              <div class="service-icon">✦</div>
+              <h3>Moderní Web design</h3>
+              <p>Rychlé, elegantní a responzivní weby, které vás budou perfektně
+                reprezentovat před klienty.</p>
+            </div>
+            <div class="service-box">
+              <div class="service-icon">⚡</div>
+              <h3>Oprava a aktualizace webů</h3>
+              <p>Máte starý web, který nefunguje, jak má? Pomůžeme s opravou,
+                úpravami a aktualizacemi, aby byl opět rychlý a moderní.</p>
+            </div>
+            <div class="service-box">
+              <div class="service-icon">🚀</div>
+              <h3>Optimalizace a vylepšení</h3>
+              <p>Zlepšíme rychlost, přehlednost a funkčnost vašeho webu, aby
+                vaše firma působila profesionálně a přehledně.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontakt" class="contact">
+        <div class="container contact-container">
+          <div class="contact-info">
+            <h2>Pojďme vytvořit něco <span
+                class="text-gradient">skvělého</span></h2>
+            <p>Napište nám o svém projektu a my se vám obratem ozveme s návrhem
+              řešení.</p>
+          </div>
+          <form class="contact-form">
+            <div class="input-group">
+              <input type="text" placeholder="Jméno a příjmení" required>
+            </div>
+            <div class="input-group">
+              <input type="email" placeholder="E-mailová adresa" required>
+            </div>
+            <div class="input-group">
+              <textarea placeholder="Popište nám svůj nápad..." rows="5"
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Odeslat
+              poptávku</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-logo">Volsi<span>.</span></div>
+        <p>&copy; 2026 Volsi. Tvořeno s vášní pro web.</p>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <section id="sluzby" class="services">
-    <div class="container">
-      <h2 class="section-title">Co přesně děláme</h2>
-      <div class="services-grid">
-        <div class="service-box">
-          <div class="service-icon">✦</div>
-          <h3>Moderní vizitky</h3>
-          <p>Rychlé, elegantní a responzivní weby, které vás budou perfektně reprezentovat před klienty.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-icon">⚡</div>
-          <h3>E-commerce</h3>
-          <p>Stavíme e-shopy, ve kterých se zákazníci neztratí a které reálně zvyšují vaše prodeje.</p>
-        </div>
-        <div class="service-box">
-          <div class="service-icon">🚀</div>
-          <h3>Webové aplikace</h3>
-          <p>Máte složitější nápad? Naprogramujeme vám aplikaci na míru přesně podle vašich požadavků.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="kontakt" class="contact">
-    <div class="container contact-container">
-      <div class="contact-info">
-        <h2>Pojďme vytvořit něco <span class="text-gradient">skvělého</span></h2>
-        <p>Napište nám o svém projektu a my se vám obratem ozveme s návrhem řešení.</p>
-      </div>
-      <form class="contact-form">
-        <div class="input-group">
-          <input type="text" placeholder="Jméno a příjmení" required>
-        </div>
-        <div class="input-group">
-          <input type="email" placeholder="E-mailová adresa" required>
-        </div>
-        <div class="input-group">
-          <textarea placeholder="Popište nám svůj nápad..." rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Odeslat poptávku</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-logo">Volsi<span>.</span></div>
-    <p>&copy; 2026 Volsi. Tvořeno s vášní pro web.</p>
-  </div>
-</footer>
-
-</body>
+    <script src="script.js" defer></script>
+  </body>
 </html>
