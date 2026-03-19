@@ -144,17 +144,20 @@
           <form class="contact-form" action="https://formspree.io/f/xdawbznd"
             method="POST">
             <div class="input-group">
-              <input type="text" placeholder="Jméno a příjmení" required>
+              <input type="text" name="name"
+                placeholder="Jméno nebo název firmy" required>
             </div>
             <div class="input-group">
-              <input type="email" placeholder="E-mailová adresa" required>
+              <input type="email" name="email" placeholder="E-mailová adresa"
+                required>
             </div>
             <div class="input-group">
-              <textarea placeholder="Popište nám svůj nápad..." rows="5"
-                required></textarea>
+              <textarea name="message" placeholder="Popište nám svůj nápad..."
+                rows="5" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">Odeslat
-              poptávku</button>
+            <button type="submit" class="btn btn-primary btn-block">
+              Odeslat poptávku
+            </button>
           </form>
         </div>
       </section>

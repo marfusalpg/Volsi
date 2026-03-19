@@ -653,9 +653,10 @@ section {
 
 .input-group input,
 .input-group textarea {
+  font-size: 15px;
   width: 100%;
   padding: 1.2rem;
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(15, 23, 42, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   color: var(--text-main);
