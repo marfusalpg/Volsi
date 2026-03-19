@@ -1,4 +1,4 @@
-﻿// Výběr prvků z DOMu
+// Výběr prvků z DOMu
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
@@ -6,7 +6,7 @@ const preloader = document.getElementById('preloader');
 
 let lastScrollTop = 0;
 
-// --- 1. FUNKCE PRO MOBILNÍ MENU ---
+// --- 1. FUNKCE PRO MOBILNÍ MENU s ---
 
 // Přepínání menu (Hamburger -> Křížek)
 mobileMenu.addEventListener('click', () => {
@@ -15,7 +15,7 @@ mobileMenu.addEventListener('click', () => {
     mobileMenu.setAttribute('aria-expanded', isActive ? 'true' : 'false');
 });
 
-// Zavření menu po kliknutí na odkaz (aby nezůstalo viset přes obsah)
+// Zavření menu po kliknutí na odkaz
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         mobileMenu.classList.remove('is-active');
@@ -25,24 +25,29 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 
 // --- 2. CHYTRÉ SCHOVÁVÁNÍ NAVBARU (SCROLL EFFECT) ---
+// Pro plynulost nezapomeň mít v CSS u .navbar: transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
 window.addEventListener('scroll', () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+    // Pokud je menu aktivní (mobilní verze), neschováváme ho
     if (navLinks.classList.contains('active')) {
         return;
     }
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
-        navbar.style.top = '-85px';
-        navbar.style.boxShadow = 'none';
+        // Scroll DOLŮ - Schovat (vyjede nahoru o 100% své výšky)
+        navbar.style.transform = 'translateY(-100%)';
     } else {
-        navbar.style.top = '0';
+        // Scroll NAHORU - Ukázat
+        navbar.style.transform = 'translateY(0)';
+        
+        // Dynamická změna vzhledu pozadí při scrollu
         if (scrollTop > 50) {
-            navbar.style.backgroundColor = 'rgba(24, 24, 24, 0.98)';
-            navbar.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+            navbar.style.backgroundColor = 'rgba(10, 14, 41, 0.98)'; 
+            navbar.style.boxShadow = '0 12px 28px rgba(0, 0, 0, 0.55)';
         } else {
-            navbar.style.backgroundColor = 'rgba(24, 24, 24, 0.95)';
+            navbar.style.backgroundColor = 'rgba(10, 14, 41, 0.9)';
             navbar.style.boxShadow = 'none';
         }
     }
@@ -51,7 +56,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 
-// --- 3. SMOOTH SCROLL (bonus pro plynulý dojem) ---
+// --- 3. SMOOTH SCROLL ---
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -60,7 +65,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
 
         const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) {
+            target.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
     });
 });
 
@@ -73,18 +83,19 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('in-view');
         }
     });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('.card, .member, .contact-box, h2, .hero h1, .hero p, .btn').forEach(el => {
+// Přidáno pro širší škálu elementů z tvého HTML
+document.querySelectorAll('.service-box, .team-card, .contact-container, h2, .hero-title, .hero-subtitle, .btn').forEach(el => {
     el.classList.add('animate-on-scroll');
     observer.observe(el);
 });
 
 
-// --- 5. LOGIKA PRO JEMNÉ DROBNOSTI ---
+// --- 5. LOGIKA PRO RESIZE A PRELOADER ---
 
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 900) {
         navLinks.classList.remove('active');
         mobileMenu.classList.remove('is-active');
         mobileMenu.setAttribute('aria-expanded', 'false');
