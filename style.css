@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
+  --safe-top: env(safe-area-inset-top);
   --bg-dark: #080712;
   --bg-card: rgba(24, 27, 67, 0.72);
   --text-main: #eef2ff;
@@ -30,6 +31,17 @@ body {
   background-attachment: fixed;
   background-size: 150% 150%;
   animation: backgroundShift 18s ease-in-out infinite;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--safe-top);
+  background-color: #080712; /* stejná barva jako tvůj background */
+  z-index: 9999; /* vyšší než všechno ostatní */
 }
 
 @keyframes backgroundShift {
