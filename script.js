@@ -1,4 +1,4 @@
-﻿// Výběr prvků z DOMu
+// Výběr prvků z DOMu
 const mobileMenu = document.getElementById('mobile-menu');
 const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
