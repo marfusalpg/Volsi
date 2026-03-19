@@ -122,7 +122,7 @@
         </div>
       </section>
 
-      <section id="kontakt" class="contact">
+<section id="kontakt" class="contact">
         <div class="container contact-container">
           <div class="contact-info">
             <h2>Pojďme vytvořit něco <span
@@ -130,20 +130,26 @@
             <p>Napište nám o svém projektu a my se vám obratem ozveme s návrhem
               řešení.</p>
           </div>
-          <form class="contact-form">
+          
+          <form class="contact-form" action="https://formspree.io/f/VÁŠ_UNIKÁTNÍ_KÓD" method="POST">
+            
             <div class="input-group">
-              <input type="text" placeholder="Jméno a příjmení" required>
+              <input type="text" name="jmeno" placeholder="Jméno a příjmení" required>
             </div>
+            
             <div class="input-group">
-              <input type="email" placeholder="E-mailová adresa" required>
+              <input type="email" name="email" placeholder="E-mailová adresa" required>
             </div>
+            
             <div class="input-group">
-              <textarea placeholder="Popište nám svůj nápad..." rows="5"
+              <textarea name="zprava" placeholder="Popište nám svůj nápad..." rows="5"
                 required></textarea>
             </div>
+            
             <button type="submit" class="btn btn-primary btn-block">Odeslat
               poptávku</button>
           </form>
+          
         </div>
       </section>
     </main>
