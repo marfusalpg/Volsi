@@ -535,7 +535,7 @@ section {
   border-radius: 50%;
   background: var(--gradient);
   margin: 0 auto 1rem;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .avatar img {
