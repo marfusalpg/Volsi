@@ -21,7 +21,6 @@
 }
 
 body {
-
   min-height: 100vh;
   color: var(--text-main);
   line-height: 1.6;
@@ -32,20 +31,12 @@ body {
   background-attachment: fixed;
   background-size: 150% 150%;
   animation: backgroundShift 18s ease-in-out infinite;
+  margin: 0;
+  padding: 0;
+  padding-top: env(safe-area-inset-top);
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--safe-top);
-  background-color: #080712;
-  /* stejná barva jako tvůj background */
-  z-index: 9999;
-  /* vyšší než všechno ostatní */
-}
+
 
 @keyframes backgroundShift {
 
@@ -60,6 +51,7 @@ body::before {
 }
 
 html {
+  background-color: #080712;
   scroll-behavior: smooth;
 }
 
