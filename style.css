@@ -47,15 +47,21 @@ body {
 
 
 @keyframes backgroundShift {
-
-  0%,
-  100% {
+  0%, 100% {
     background-position: 0% 0%, 100% 100%, 0% 0%;
   }
-
   50% {
     background-position: 30% 10%, 70% 90%, 100% 0%;
   }
+}
+
+.hero-title,
+.hero-subtitle,
+.hero-buttons .btn,
+.team-card,
+.service-box,
+.popup {
+  will-change: transform, opacity; /* GPU akcelerace */
 }
 
 html {
@@ -742,6 +748,33 @@ footer {
   .contact-container {
     padding: 2rem;
   }
+
+  @media (max-width: 900px) {
+  /* Hero dekorace */
+  .hero-deco-1,
+  .hero-deco-2 {
+    animation: none; /* vypnutí float pro mobil */
+    filter: blur(2px); /* menší blur */
+    opacity: 0.1; /* decentní efekt */
+  }
+
+  /* Popup / karty */
+  .popup,
+  .team-card,
+  .service-box {
+    animation: none; /* žádné popup animace */
+    transition: transform 0.2s ease; /* jen hover */
+  }
+
+  /* Hero text a tlačítka */
+  .hero-title,
+  .hero-subtitle,
+  .hero-buttons .btn {
+    animation: none; /* statické zobrazení */
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 }
 
 @media (max-width: 900px) {
