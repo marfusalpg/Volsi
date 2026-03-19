@@ -6,7 +6,7 @@ const preloader = document.getElementById('preloader');
 
 let lastScrollTop = 0;
 
-// --- 1. FUNKCE PRO MOBILNÍ MENU ---
+// --- 1. FUNKCE PRO MOBILNÍ MENU s ---
 
 // Přepínání menu (Hamburger -> Křížek)
 mobileMenu.addEventListener('click', () => {
