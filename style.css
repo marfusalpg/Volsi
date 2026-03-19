@@ -21,6 +21,7 @@
 }
 
 body {
+  background-color: #080712;
   min-height: 100vh;
   color: var(--text-main);
   line-height: 1.6;
@@ -33,7 +34,6 @@ body {
   animation: backgroundShift 18s ease-in-out infinite;
   margin: 0;
   padding: 0;
-  padding-top: env(safe-area-inset-top);
 }
 
 
@@ -52,7 +52,9 @@ body {
 
 html {
   background-color: #080712;
+  height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .container {
@@ -72,8 +74,10 @@ html {
 .navbar {
   position: fixed;
   top: 0;
+  left:0;
+  right: 0;
   width: 100%;
-  background: rgba(10, 14, 41, 0.80);
+  background: rgba(10, 14, 41, 0.9);
   backdrop-filter: blur(14px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.55);
   z-index: 1000;
