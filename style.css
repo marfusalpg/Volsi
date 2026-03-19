@@ -26,14 +26,22 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+
+  /* gradienty */
   background: radial-gradient(circle at 30% 0%, rgba(124, 58, 237, 0.30), transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(147, 51, 234, 0.22), transparent 40%),
-    linear-gradient(145deg, #000006, #0b0f2a 45%, #130f33);
-  background-attachment: fixed;
-  background-size: 150% 150%;
+              radial-gradient(circle at 85% 80%, rgba(147, 51, 234, 0.22), transparent 40%),
+              linear-gradient(145deg, #000006, #0b0f2a 45%, #130f33);
+  
+  background-size: cover; /* roztáhne gradient po celé ploše */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll; /* mobil-friendly */
   animation: backgroundShift 18s ease-in-out infinite;
+  
   margin: 0;
   padding: 0;
+  will-change: background-position;
+  transform: translateZ(0); /* GPU akcelerace */
 }
 
 
@@ -713,7 +721,14 @@ footer {
 }
 
 @media (max-width: 900px) {
-
+  body {
+    background-size: 150% 150%; /* zachování vrstev */
+  }
+  .hero-deco-1,
+  .hero-deco-2 {
+    animation: none;
+    opacity: 0.12;
+  }
   .about-grid,
   .contact-container {
     grid-template-columns: 1fr;
