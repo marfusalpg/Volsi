@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 :root {
+  --safe-top: env(safe-area-inset-top);
   --bg-dark: #080712;
   --bg-card: rgba(24, 27, 67, 0.72);
   --text-main: #eef2ff;
@@ -20,7 +21,7 @@
 }
 
 body {
-  background-color: #080712;
+
   min-height: 100vh;
   color: var(--text-main);
   line-height: 1.6;
@@ -685,6 +686,9 @@ footer {
   font-weight: 800;
   color: var(--text-main);
 }
+.footer-logo img{
+  height: 25px;
+}
 
 .footer-logo span {
   color: var(--accent-1);
@@ -755,4 +759,8 @@ footer {
   .hero-buttons {
     flex-direction: column;
   }
+  .footer-inner p{
+    transform: scale(85%);
+  }
+
 }
