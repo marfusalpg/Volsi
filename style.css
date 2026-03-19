@@ -207,37 +207,43 @@ html {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* PRELOADER */
+/* --- PRELOADER --- */
 .preloader {
-  position: fixed;
-  inset: 0;
-  background: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
+  position: fixed;     /* FIXACE NA OBRAZOVKU */
+  top: 0;              /* Začít úplně nahoře viewportu */
+  left: 0;             /* Začít úplně vlevo viewportu */
+  width: 100vw;        /* Šířka celého výhledu */
+  height: 100vh;       /* Výška celého výhledu - ZÁSADNÍ */
+  background: #080712; 
+  display: flex;       /* Flexbox pro vycentrování spinneru */
+  align-items: center; /* Vertikální centr */
+  justify-content: center; /* Horizontální centr */
+  z-index: 9999;       /* Aby byl nad vším (navbar má 1000) */
+  
+  /* Plynulé zmizení */
   opacity: 1;
-  transition: opacity 0.5s ease;
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 .preloader.loaded {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
 .spinner {
+  /* Velikost a styl spinneru */
   width: 56px;
   height: 56px;
-  border: 6px solid rgba(255, 255, 255, 0.15);
+  border: 6px solid rgba(255, 255, 255, 0.1);
   border-top-color: var(--accent-1);
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
 
 /* MOBILE MENU */
