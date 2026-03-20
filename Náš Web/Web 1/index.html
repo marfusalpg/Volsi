@@ -2,18 +2,33 @@
 <html lang="cs">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta property="og:image"
+      content="https://github.com/marfusalpg/Volsi/blob/Web/img/Logo%20black.png">
     <title>Volsi | Prémiová tvorba webů</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/Favicon.png" type="image/png">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
       rel="stylesheet">
+
+    <!--Theme settings for phone -funguje -->
+    <meta name="theme-color" content="#080712"
+      media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#080712"
+      media="(prefers-color-scheme: light)">
+    <meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
+
+    <meta name="description"
+      content="Volsi je tým studentů zaměřený na tvorbu moderních a dostupných webů. Děláme rychlé, efektivní a na míru šité řešení pro každého, kdo chce být vidět online. Rosteme spolu s vámi. ">
+    <meta property="og:image" content="https://marfusalpg.github.io/Volsi/img/Og_image.png">
   </head>
   <body>
 
-    <div id="preloader" class="preloader" aria-hidden="true">
-      <div class="spinner"></div>
+    <div id="preloader" class="preloader">
+        <div class="spinner"></div>
     </div>
 
     <header class="navbar">
@@ -46,7 +61,8 @@
         <div class="container">
           <h1 class="hero-title">Tvoříme weby, které <span
               class="text-gradient">vyčnívají z davu</span></h1>
-          <p class="hero-subtitle">Jsme tři studenti IT s vášní pro kód a design.
+          <p class="hero-subtitle">Jsme tři studenti IT s vášní pro kód a
+            design.
             Spojujeme moderní technologie s osobním přístupem, abychom váš
             projekt posunuli na další úroveň.</p>
           <div class="hero-buttons">
@@ -62,22 +78,23 @@
         <div class="container">
           <div class="about-grid">
             <div class="about-content">
-              <h2>Profesionální výsledky,<br><span class="text-gradient">kamarádský přístup</span></h2>
+              <h2>Profesionální výsledky,<br><span
+                  class="text-gradient">kamarádský přístup</span></h2>
               <p>Zapomeňte na zdlouhavé procesy a anonymní korporátní přístup.
                 Jsme studenti, co weby umí dělat rychle, efektivně a za rozumnou
                 cenu. Každý detail je pro nás důležitý – váš úspěch je i naší
-                vizitkou. Sledujeme nejnovější trendy, abychom vám dodali web,
+                vizitkou. Sledujeme nejnovější trendy, abychom Vám dodali web,
                 který nejen hezky vypadá, ale hlavně funguje a načítá se rychle.
                 Ať už potřebujete nový web, nebo jen opravit ten stávající, jsme
-                tu, abychom vám pomohli jednoduše a bez zbytečných
+                tu, abychom Vám pomohli jednoduše a bez zbytečných
                 komplikací.</p>
             </div>
             <div class="team-cards">
               <div class="team-card">
                 <div class="avatar"><img src="img/Martin.JPG" alt></div>
                 <h3>Martin Voltner</h3>
-                <p>Back-End Developer</p>
-                <p>Designér</p>
+                <p>Back-End & Front-end Developer</p>
+
               </div>
               <div class="team-card">
                 <div class="avatar"><img src="img/Ondra.jpg" alt></div>
@@ -122,41 +139,41 @@
         </div>
       </section>
 
-<section id="kontakt" class="contact">
+      <section id="kontakt" class="contact">
         <div class="container contact-container">
           <div class="contact-info">
             <h2>Pojďme vytvořit něco <span
                 class="text-gradient">skvělého</span></h2>
-            <p>Napište nám o svém projektu a my se vám obratem ozveme s návrhem
+            <p>Napište nám o svém projektu a my se Vám obratem ozveme s návrhem
               řešení.</p>
           </div>
-          
-          <form class="contact-form" action="https://formspree.io/f/xdawbznd" method="POST">
-            
+          <form class="contact-form" action="https://formspree.io/f/mbdzwwyl"
+            method="POST">
             <div class="input-group">
-              <input type="text" name="jmeno" placeholder="Jméno a příjmení" required>
+              <input type="text" name="name"
+                placeholder="Jméno nebo název firmy" required>
             </div>
-            
             <div class="input-group">
-              <input type="email" name="email" placeholder="E-mailová adresa" required>
+              <input type="email" name="email" placeholder="E-mailová adresa"
+                required>
             </div>
-            
             <div class="input-group">
-              <textarea name="zprava" placeholder="Popište nám svůj nápad..." rows="5"
-                required></textarea>
+              <textarea name="message" placeholder="Popište nám svůj nápad..."
+                rows="5" required></textarea>
             </div>
-            
-            <button type="submit" class="btn btn-primary btn-block">Odeslat
-              poptávku</button>
+            <button type="submit" class="btn btn-primary btn-block">
+              Odeslat poptávku
+            </button>
           </form>
-          
         </div>
       </section>
     </main>
 
     <footer>
       <div class="container footer-inner">
-        <div class="footer-logo">Volsi<span>.</span></div>
+        <div class="footer-logo">
+          <img src="img/Logo white.png" alt="Volsi logo">
+        </div>
         <p>&copy; 2026 Volsi. Tvořeno studenty s vášní pro web.</p>
       </div>
     </footer>
