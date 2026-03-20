@@ -1,0 +1,693 @@
+/* --- Základní styly, Proměnné & Reset --- */
+:root {
+    /* Paleta - Luxusní, tlumené, perleťové tóny */
+    --color-bg-white: #FAFAFA;
+    /* Jemnější, perleťově bílá namísto tvrdé bílé */
+    --color-bg-cream: #F5F1ED;
+    /* Teplejší krémová pro pozadí sekcí */
+    --color-bg-dark: #2C3531;
+    /* Hluboká, matná šedo-zelená */
+    --color-text-main: #2D3436;
+    /* Tmavě břidlicová pro čitelnost */
+    --color-text-light: #F4F4F5;
+    /* Off-white pro text na tmavém */
+    --color-text-muted: #636E72;
+    /* Tlumená šedá */
+    --color-sage: #5F6F61;
+    /* Hlubší, sofistikovanější šalvějová */
+    --color-sage-hover: #4A584C;
+    /* Tmavší pro interakci */
+    --color-champagne: #D1C7B7;
+    /* Matná champagne pro luxusní akcenty */
+    --color-border: #E8E8E8;
+    /* Ultra jemná dělící linka */
+
+    /* Typografie */
+    --font-heading: 'Tenor Sans', serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Detaily */
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* Hladší, pomalejší transition */
+    --radius-small: 4px;
+    /* Jemnější, sofistikovanější zaoblení */
+    --shadow-card: 0 10px 40px rgba(0, 0, 0, 0.03);
+    /* Velmi jemný stín */
+    --shadow-heavy: 0 20px 60px rgba(0, 0, 0, 0.1);
+    /* Hluboký stín pro formulář */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    /* Vyhlazení písem pro Mac */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-white);
+    color: var(--color-text-main);
+    line-height: 1.8;
+    /* Vyšší řádkování pro pocit luxusu */
+    font-weight: 300;
+    /* Lehká váha písma */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    /* Větší padding na bocích */
+}
+
+/* --- Typografie - Detaily --- */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    /* Zvýšený rozestup písmen u nadpisů */
+    color: var(--color-text-main);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-muted);
+    letter-spacing: 0.2px;
+}
+
+.thin {
+    font-weight: 300;
+    color: var(--color-sage);
+}
+
+.section-header {
+    max-width: 700px;
+    margin-bottom: 80px;
+    /* Větší rozestup */
+}
+
+.section-header.text-center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.pre-title {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    /* Ještě vyšší spacing pro "fashion" dojem */
+    color: var(--color-sage);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.pre-title.light {
+    color: var(--color-champagne);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    /* Mírně zvětšený */
+    line-height: 1.2;
+}
+
+/* --- Tlačítka - Jemnější a plynulejší --- */
+.btn {
+    display: inline-block;
+    padding: 16px 35px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    /* Vyšší spacing */
+    border-radius: var(--radius-small);
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--color-sage);
+    color: var(--color-bg-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-sage-hover);
+    box-shadow: 0 5px 15px rgba(95, 111, 97, 0.2);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text-main);
+}
+
+.btn-outline:hover {
+    border-color: var(--color-sage);
+    color: var(--color-sage);
+}
+
+.btn-outline-light {
+    background-color: transparent;
+    border-color: rgba(209, 199, 183, 0.5);
+    /* Průhlednější champagne */
+    color: var(--color-bg-white);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--color-champagne);
+    color: var(--color-bg-dark);
+    border-color: var(--color-champagne);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* --- Navigace - Čistá a fixní --- */
+.navbar {
+    background-color: rgba(250, 250, 250, 0.95);
+    /* Perleťové pozadí s opacitou */
+    backdrop-filter: blur(10px);
+    /* Moderní rozostření pozadí */
+    height: 100px;
+    /* Mírně vyšší */
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    /* Větší mezery */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-main);
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--color-sage);
+}
+
+.nav-btn {
+    padding: 12px 28px;
+    font-size: 0.75rem;
+}
+
+/* --- Hero Sekce - Tmavý Luxus --- */
+.hero {
+    background-color: var(--color-bg-dark);
+    position: relative;
+    padding-top: 180px;
+    /* Vyšší padding kvůli navbaru */
+    padding-bottom: 120px;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Přidán jemný dělící přechod pro hloubku */
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(to right, var(--color-bg-dark) 0%, rgba(44, 53, 49, 0) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    /* Větší mezera */
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text-box h1 {
+    font-size: 4rem;
+    /* Dramatická velikost */
+    line-height: 1.1;
+    color: var(--color-bg-white);
+    margin-bottom: 30px;
+}
+
+.hero-text-box p {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    opacity: 0.85;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-image-box {
+    position: relative;
+    border-radius: var(--radius-small);
+    overflow: hidden;
+    box-shadow: var(--shadow-heavy);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Ultra tenký světlý okraj */
+}
+
+.hero-image-box img {
+    width: 100%;
+    height: 650px;
+    /* Vyšší fotka */
+    object-fit: cover;
+    display: block;
+    filter: sepia(10%) contrast(105%);
+    /* Jemný filtr pro "art" dojem */
+}
+
+/* --- Sekce Služby --- */
+.services {
+    padding: 140px 0;
+    /* Vyšší rozestupy */
+    background-color: var(--color-bg-cream);
+    /* Tady krémová pro kontrast */
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 50px;
+    /* Větší mezery */
+}
+
+.service-card {
+    background-color: var(--color-bg-white);
+    padding: 60px;
+    /* Více vzduchu uvnitř */
+    border-radius: var(--radius-small);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    /* Vyšší hover lift */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon-box {
+    width: 70px;
+    /* Větší ikony */
+    height: 70px;
+    background-color: var(--color-bg-cream);
+    color: var(--color-sage);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    color: var(--color-text-main);
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.service-link {
+    font-size: 0.8rem;
+    color: var(--color-sage);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.service-info {
+    font-size: 0.8rem;
+    color: var(--color-champagne);
+    font-weight: 400;
+}
+
+/* Karta Pánské - Inverzní, Luxusní tmavá */
+.service-highlight {
+    background-color: var(--color-sage);
+    border-color: var(--color-sage);
+}
+
+.service-highlight h3,
+.service-highlight p,
+.service-highlight .service-icon-box {
+    color: var(--color-bg-white);
+}
+
+.service-highlight .service-icon-box {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Sekce Specialisté --- */
+.team {
+    padding: 140px 0;
+    background-color: var(--color-bg-white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: var(--color-bg-cream);
+    padding: 60px 50px;
+    border-radius: var(--radius-small);
+    text-align: center;
+    border: 1px solid var(--color-border);
+}
+
+.member-image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-bg-white);
+    color: var(--color-sage);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.role {
+    color: var(--color-sage) !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.desc {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* --- Sekce Rezervace - Tmavé Elegantní finále --- */
+.booking-section {
+    padding: 140px 0;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    /* Velká mezera */
+    align-items: center;
+}
+
+.booking-info .section-title {
+    color: var(--color-bg-white);
+    margin-bottom: 25px;
+}
+
+.booking-desc {
+    color: var(--color-text-light);
+    opacity: 0.8;
+    margin-bottom: 50px;
+    font-size: 1.15rem;
+    font-weight: 300;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: var(--radius-small);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-card i {
+    font-size: 2rem;
+    color: var(--color-champagne);
+}
+
+.contact-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card strong {
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: var(--color-bg-white);
+}
+
+.contact-card span {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* Formulář - Čistý, "plovoucí" na tmavém */
+.booking-form-container {
+    background-color: var(--color-bg-white);
+    padding: 60px;
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow-heavy);
+}
+
+.booking-form .form-group {
+    margin-bottom: 25px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-main);
+    transition: var(--transition);
+    background-color: var(--color-bg-white);
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    outline: none;
+    border-color: var(--color-sage);
+}
+
+.booking-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* --- Patička - Perleťová --- */
+.footer {
+    padding: 100px 0 40px;
+    background-color: var(--color-bg-white);
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.footer-brand .logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    font-size: 1.6rem;
+    color: var(--color-text-muted);
+    transition: var(--transition);
+    margin-right: 20px;
+}
+
+.social-links a:hover {
+    color: var(--color-sage);
+}
+
+.footer-contact h4 {
+    margin-bottom: 25px;
+}
+
+.footer-contact p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    color: var(--color-sage);
+    width: 25px;
+    margin-right: 8px;
+}
+
+.opening-hours {
+    margin-top: 25px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scroll-padding-top: 100px;
+}
+
+.footer-bottom {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+    padding-top: 40px;
+    text-align: center;
+}
+
+/* --- Responzivita (Tablety & Mobily) --- */
+@media (max-width: 1024px) {
+
+    .hero-container,
+    .booking-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .hero {
+        padding-top: 150px;
+        text-align: center;
+    }
+
+    .hero-text-box {
+        margin: 0 auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image-box img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .navbar {
+        height: 80px;
+    }
+
+    .nav-links,
+    .nav-btn {
+        display: none;
+    }
+
+    .hero-text-box h1 {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .booking-form-container {
+        padding: 40px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
