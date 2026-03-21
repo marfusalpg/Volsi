@@ -20,15 +20,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-@supports (-webkit-touch-callout: none) {
-  body {
-    background-attachment: scroll;
-    animation: none;
-  }
-}
-
 body {
-  background-attachment: scroll;
   background-color: #080712;
   min-height: 100vh;
   color: var(--text-main);
