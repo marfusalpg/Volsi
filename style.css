@@ -65,7 +65,6 @@ body::before {
 html {
   background-color: #080712;
   height: 100%;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -309,14 +308,14 @@ html {
 
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .animate-on-scroll.in-view {
   opacity: 1;
   transform: translateY(0);
-  animation: popupIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .popup {

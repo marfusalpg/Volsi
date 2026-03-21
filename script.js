@@ -77,13 +77,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // --- 4. ANIMACE NA SCROLL ---
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
         }
     });
-}, { threshold: 0.15 });
+}, { 
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0 
+});
 
 // Přidáno pro širší škálu elementů z tvého HTML
 document.querySelectorAll('.service-box, .team-card, .contact-container, h2, .hero-title, .hero-subtitle, .btn').forEach(el => {
