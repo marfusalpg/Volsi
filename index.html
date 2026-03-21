@@ -17,7 +17,11 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="preload" href="style.css" as="style">
 
   <!-- Hlavní CSS -->
   <link rel="stylesheet" href="style.css">
@@ -55,8 +59,8 @@
     <div class="container navbar-inner">
       <a href="index.html" class="logo">
         <span class="logo-wrapper">
-          <img src="img/Logo white.webp" class="logo-base" alt="Volsi logo">
-          <img src="img/Logo Gradient.webp" class="logo-hover" alt="Volsi logo gradient">
+          <img src="img/Logo white.webp" class="logo-base" alt="Volsi logo" width="120" height="30">
+          <img src="img/Logo Gradient.webp" class="logo-hover" alt="Volsi logo gradient" width="120" height="30">
         </span>
       </a>
       <button id="mobile-menu" class="mobile-menu" aria-label="Toggle menu" aria-expanded="false">
@@ -87,8 +91,10 @@
           <a href="#o-nas" class="btn btn-secondary">Zjistit více</a>
         </div>
       </div>
-      <img src="img/glass-cloud-icon.webp" class="hero-deco hero-deco-1" alt="" aria-hidden="true">
-      <img src="img/glass-cloud-icon.webp" class="hero-deco hero-deco-2" alt="" aria-hidden="true">
+      <img src="img/glass-cloud-icon.webp" class="hero-deco hero-deco-1" alt="" aria-hidden="true" width="120"
+        height="120">
+      <img src="img/glass-cloud-icon.webp" class="hero-deco hero-deco-2" alt="" aria-hidden="true" width="180"
+        height="180">
     </section>
 
     <section id="o-nas" class="about">
@@ -187,7 +193,7 @@
   <footer>
     <div class="container footer-inner">
       <div class="footer-logo">
-        <img src="img/Logo white.webp" alt="Volsi logo">
+        <img src="img/Logo white.webp" alt="Volsi logo" width="100" height="25" loading="lazy">
       </div>
       <p>&copy; 2026 Volsi. Tvořeno studenty s vášní pro web.</p>
     </div>
