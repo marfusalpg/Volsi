@@ -357,6 +357,7 @@ html {
   width: 120px;
   opacity: 0.15;
   pointer-events: none;
+   height: auto;
 }
 
 .hero-deco-1 {
@@ -364,6 +365,7 @@ html {
   top: 20%;
   left: 5%;
   animation: float 6s ease-in-out infinite;
+   height: auto;
 }
 
 .hero-deco-2 {
@@ -373,6 +375,7 @@ html {
   right: 10%;
   animation: float 8s ease-in-out infinite;
   width: 180px;
+  height: auto;
 }
 
 @keyframes float {
@@ -745,6 +748,16 @@ footer {
     overflow: hidden;
     pointer-events: none;
     z-index: 1005;
+  }
+ 
+
+  .hero-deco-1{
+    width: 100px;
+    height: auto;
+  }
+  .hero-deco-2{
+    width: 200px;;
+    height: auto;
   }
 
   .nav-links.active {
