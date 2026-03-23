@@ -357,7 +357,7 @@ html {
   width: 120px;
   opacity: 0.15;
   pointer-events: none;
-   height: auto;
+  height: auto;
 }
 
 .hero-deco-1 {
@@ -365,7 +365,7 @@ html {
   top: 20%;
   left: 5%;
   animation: float 6s ease-in-out infinite;
-   height: auto;
+  height: auto;
 }
 
 .hero-deco-2 {
@@ -547,8 +547,13 @@ section {
 
 .team-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1.5fr);
   gap: 1.5rem;
+  grid-auto-flow: dense;
+}
+
+.team-card.fusha {
+  grid-column: 1 / -1;
 }
 
 .team-card {
@@ -558,11 +563,35 @@ section {
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease;
+  min-width: 200px;
 }
+
 
 .team-card:hover {
   transform: translateY(-5px);
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.team-card a {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  padding-top: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.team-card a img {
+  padding-right: 5px;
+  ;
+}
+
+.team-card:hover a {
+  opacity: 1;
+  visibility: visible;
 }
 
 .avatar {
@@ -582,6 +611,7 @@ section {
   margin: 0 auto 1rem;
   opacity: 0.8;
 }
+
 
 .team-card h3 {
   font-size: 1.2rem;
@@ -696,14 +726,10 @@ footer {
   align-items: center;
 }
 
-.footer-logo {
-  font-size: 1.2rem;
-  font-weight: 800;
-  color: var(--text-main);
-}
 
 .footer-logo img {
-  height: 25px;
+  height: 30px;
+  width: auto;
 }
 
 .footer-logo span {
@@ -716,6 +742,17 @@ footer {
   .contact-container {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .team-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+ 
+
+  .team-card.fusha {
+    grid-column: auto;
   }
 
   .hero-title {
@@ -749,14 +786,16 @@ footer {
     pointer-events: none;
     z-index: 1005;
   }
- 
 
-  .hero-deco-1{
+
+  .hero-deco-1 {
     width: 100px;
     height: auto;
   }
-  .hero-deco-2{
-    width: 200px;;
+
+  .hero-deco-2 {
+    width: 200px;
+    ;
     height: auto;
   }
 
@@ -775,6 +814,12 @@ footer {
     transform: scale(90%);
   }
 
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -789,5 +834,7 @@ footer {
   .footer-inner p {
     transform: scale(85%);
   }
+
+
 
 }
