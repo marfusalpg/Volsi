@@ -948,6 +948,15 @@ footer {
 .btn-small {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+  border: 1px solid rgba(170, 139, 255, 0.40);
+}
+
+.btn-small:hover {
+  background: rgba(118, 77, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.35);
+  transform: translateY(-2px);
 }
 
 .portfolio-content {
@@ -1366,9 +1375,6 @@ footer {
   color: white;
 }
 
-.floating-btn.whatsapp:hover {
-  background: #25d366;
-}
 
 /* Cookie Banner */
 .cookie-banner {
