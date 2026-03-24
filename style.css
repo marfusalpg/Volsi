@@ -357,7 +357,6 @@ html {
   width: 120px;
   opacity: 0.15;
   pointer-events: none;
-  height: auto;
 }
 
 .hero-deco-1 {
@@ -365,7 +364,6 @@ html {
   top: 20%;
   left: 5%;
   animation: float 6s ease-in-out infinite;
-  height: auto;
 }
 
 .hero-deco-2 {
@@ -375,9 +373,10 @@ html {
   right: 10%;
   animation: float 8s ease-in-out infinite;
   width: 180px;
-  height: auto;
 }
 
+<<<<<<< HEAD
+=======
 .hero-bg-image {
   position: absolute;
   top: 0;
@@ -396,6 +395,7 @@ html {
   filter: blur(2px);
 }
 
+>>>>>>> parent of 57f0b51 (treo)
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -565,6 +565,20 @@ section {
 
 .team-cards {
   display: grid;
+<<<<<<< HEAD
+  grid-template-columns: repeat(3, 1fr);
+  /* Upraveno na 3 sloupce pro velká zařízení */
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+=======
   grid-template-columns: repeat(2, 1.5fr);
   gap: 1.5rem;
   grid-auto-flow: dense;
@@ -572,6 +586,7 @@ section {
 
 .team-card.fusha {
   grid-column: 1 / -1;
+>>>>>>> parent of 57f0b51 (treo)
 }
 
 .team-card {
@@ -590,6 +605,8 @@ section {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
+<<<<<<< HEAD
+=======
 .team-card a {
   opacity: 0;
   visibility: hidden;
@@ -612,6 +629,7 @@ section {
   visibility: visible;
 }
 
+>>>>>>> parent of 57f0b51 (treo)
 .avatar {
   width: 80px;
   height: 80px;
@@ -630,7 +648,10 @@ section {
   opacity: 0.8;
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> parent of 57f0b51 (treo)
 .team-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.2rem;
@@ -744,10 +765,14 @@ footer {
   align-items: center;
 }
 
+.footer-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
 
 .footer-logo img {
-  height: 30px;
-  width: auto;
+  height: 25px;
 }
 
 .footer-logo span {
@@ -763,6 +788,10 @@ footer {
   }
 
   .team-cards {
+<<<<<<< HEAD
+    grid-template-columns: 1fr;
+    /* Karty týmu se naskládají pod sebe na tabletech a mobilech */
+=======
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -771,6 +800,7 @@ footer {
 
   .team-card.fusha {
     grid-column: auto;
+>>>>>>> parent of 57f0b51 (treo)
   }
 
   .hero-title {
@@ -805,6 +835,8 @@ footer {
     z-index: 1005;
   }
 
+<<<<<<< HEAD
+=======
 
   .hero-deco-1 {
     width: 100px;
@@ -817,11 +849,29 @@ footer {
     height: auto;
   }
 
+>>>>>>> parent of 57f0b51 (treo)
   .nav-links.active {
     opacity: 1;
     transform: translateY(0);
     max-height: 280px;
     pointer-events: auto;
+<<<<<<< HEAD
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .contact {
+    transform: scale(90%);
+  }
+
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.5rem;
+=======
   }
 
   .mobile-menu {
@@ -1457,5 +1507,15 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+>>>>>>> parent of 57f0b51 (treo)
   }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .footer-inner p {
+    transform: scale(85%);
+  }
+
 }

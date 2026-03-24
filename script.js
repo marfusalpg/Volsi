@@ -98,8 +98,6 @@ document.querySelectorAll('.service-box, .team-card, .contact-container, h2, .he
 
 // --- 5. LOGIKA PRO RESIZE A PRELOADER ---
 
-// --- 5. LOGIKA PRO RESIZE A PRELOADER ---
-
 window.addEventListener('resize', () => {
     if (window.innerWidth > 900) {
         navLinks.classList.remove('active');
@@ -115,6 +113,8 @@ window.addEventListener('load', () => {
         preloader.style.display = 'none';
     }, 600);
 });
+<<<<<<< HEAD
+=======
 
 // --- 6. SCROLL PROGRESS BAR ---
 
@@ -295,3 +295,4 @@ function typeWriter(element, text, speed = 100) {
 //         typeWriter(heroTitle, heroTitle.textContent, 50);
 //     }, 1000);
 // });
+>>>>>>> parent of 57f0b51 (treo)
