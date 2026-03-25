@@ -61,19 +61,9 @@
       content="Tvoříme rychlé a efektivní weby na míru vašemu projektu. Podívejte se, jak vám můžeme pomoci růst v online světě díky moderním technologiím.">
     <meta name="twitter:image" content="https://www.volsi.eu/img/Og_image.webp">
 
-    <!-- Google Analytics -->
-    <script async
-      src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
-  {
+   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Volsi",
@@ -82,21 +72,21 @@
     "logo": "https://www.volsi.eu/img/Logo white.webp",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+420-123-456-789",
+      "telephone": "+420-601-537-235",
       "contactType": "customer service",
       "availableLanguage": "Czech"
     },
     "sameAs": [
-      "https://www.instagram.com/volsi_web"
+      "https://www.instagram.com/volsi.eu"
     ]
-  }
+    }
   </script>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   </head>
 
   <body>
-
     <div id="scroll-progress"></div>
     <button id="back-to-top" class="back-to-top" aria-label="Zpět nahoru">
       <i class="fas fa-arrow-up"></i>
@@ -109,6 +99,9 @@
         class="floating-btn instagram" aria-label="Instagram">
         <i class="fab fa-instagram"></i>
       </a>
+    </div>
+    <div id="preloader" class="preloader">
+      <div class="spinner"></div>
     </div>
 
     <header class="navbar">
@@ -133,6 +126,7 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#sluzby">Služby</a></li>
             <li><a href="#process">Proces</a></li>
+             <li><a href="#pricing">Ceník</a></li>
             <li><a href="#kontakt" class="btn-nav">Kontakt</a></li>
           </ul>
         </nav>
@@ -159,17 +153,9 @@
         <img src="img/glass-cloud-icon.webp" class="hero-deco hero-deco-2" alt
           aria-hidden="true" width="180"
           height="180">
-        <div class="hero-bg-image">
-          <img src="https://picsum.photos/800/600?random=7" alt
-            aria-hidden="true" loading="lazy">
-        </div>
       </section>
 
       <section id="o-nas" class="about">
-        <div class="section-bg">
-          <img src="https://picsum.photos/1200/800?random=8" alt
-            aria-hidden="true" loading="lazy">
-        </div>
         <div class="container">
           <div class="about-grid">
             <div class="about-content">
@@ -212,7 +198,6 @@
           </div>
         </div>
       </section>
-
       <section id="portfolio" class="portfolio">
         <div class="container">
           <h2 class="section-title">Naše projekty</h2>
@@ -226,7 +211,6 @@
                 <div class="portfolio-overlay">
                   <div class="portfolio-links">
                     <a href="#" class="btn btn-small ">Zobrazit</a>
-                    <a href="#" class="btn btn-small btn-secondary">Kód</a>
                   </div>
                 </div>
               </div>
@@ -247,7 +231,6 @@
                 <div class="portfolio-overlay">
                   <div class="portfolio-links">
                     <a href="#" class="btn btn-small">Zobrazit</a>
-                    <a href="#" class="btn btn-small btn-secondary">Kód</a>
                   </div>
                 </div>
               </div>
@@ -268,7 +251,6 @@
                 <div class="portfolio-overlay">
                   <div class="portfolio-links">
                     <a href="#" class="btn btn-small">Zobrazit</a>
-                    <a href="#" class="btn btn-small btn-secondary">Kód</a>
                   </div>
                 </div>
               </div>
@@ -287,10 +269,6 @@
       </section>
 
       <section id="sluzby" class="services">
-        <div class="section-bg">
-          <img src="https://picsum.photos/1200/800?random=9" alt
-            aria-hidden="true" loading="lazy">
-        </div>
         <div class="container">
           <h2 class="section-title">Co přesně děláme</h2>
           <div class="services-grid">
@@ -311,59 +289,6 @@
               <h3>Optimalizace a vylepšení</h3>
               <p>Zlepšíme rychlost, přehlednost a funkčnost vašeho webu, aby
                 vaše firma působila profesionálně a přehledně.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" class="testimonials">
-        <div class="container">
-          <h2 class="section-title">Co říkají naši klienti</h2>
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <p>"Volsi vytvořili pro nás moderní web, který přesně odpovídá
-                  našim potřebám. Profesionální přístup,
-                  rychlé dodání a skvělá komunikace."</p>
-              </div>
-              <div class="testimonial-author">
-                <img src="https://picsum.photos/50/50?random=4" alt="Jan Novák"
-                  loading="lazy">
-                <div>
-                  <h4>Jan Novák</h4>
-                  <p>CEO, TechStart s.r.o.</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <p>"Jako studenti IT rozumí moderním technologiím lépe než
-                  kdokoliv jiný. Náš e-shop běží jako hodinky a
-                  přinesl nám 300% nárůst prodejů."</p>
-              </div>
-              <div class="testimonial-author">
-                <img src="https://picsum.photos/50/50?random=5"
-                  alt="Marie Svobodová" loading="lazy">
-                <div>
-                  <h4>Marie Svobodová</h4>
-                  <p>Majitelka, EcoShop</p>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div class="testimonial-content">
-                <p>"Opravili nám starý web a udělali z něj moderní platformu.
-                  Cena byla příznivá a kvalita překonala
-                  očekávání."</p>
-              </div>
-              <div class="testimonial-author">
-                <img src="https://picsum.photos/50/50?random=6"
-                  alt="Petr Dvořák" loading="lazy">
-                <div>
-                  <h4>Petr Dvořák</h4>
-                  <p>Marketing Manager, InnoCorp</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -409,14 +334,6 @@
           <h2 class="section-title">Technologie, které používáme</h2>
           <div class="tech-grid">
             <div class="tech-item">
-              <i class="fab fa-react"></i>
-              <span>React</span>
-            </div>
-            <div class="tech-item">
-              <i class="fab fa-vuejs"></i>
-              <span>Vue.js</span>
-            </div>
-            <div class="tech-item">
               <i class="fab fa-node-js"></i>
               <span>Node.js</span>
             </div>
@@ -443,7 +360,6 @@
           </div>
         </div>
       </section>
-
       <section id="pricing" class="pricing">
         <div class="container">
           <h2 class="section-title">Cenové balíčky</h2>
@@ -479,10 +395,11 @@
               <ul class="pricing-features">
                 <li>Vše ze Základního</li>
                 <li>Admin panel</li>
-                <li>E-commerce funkce</li>
+                <li>Cookies</li>
+                <li>Porkočilé funkce</li>
                 <li>Integrace s API</li>
                 <li>3 měsíce podpory</li>
-                <li>Analytika</li>
+
               </ul>
               <a href="#kontakt" class="btn btn-primary">Vybrat balíček</a>
             </div>
@@ -496,18 +413,18 @@
               </div>
               <ul class="pricing-features">
                 <li>Vše z Profesionálního</li>
+                <li>Návrch unikátního designu</li>
+                <li>Návrch loga</li>
                 <li>Vlastní funkcionalita</li>
-                <li>Databázový design</li>
-                <li>Školení týmu</li>
+                <li>Až 30 stránek</li>
                 <li>6 měsíců podpory</li>
-                <li> SLA garance</li>
+
               </ul>
               <a href="#kontakt" class="btn btn-primary">Kontaktovat nás</a>
             </div>
           </div>
         </div>
       </section>
-
       <section id="faq" class="faq">
         <div class="container">
           <h2 class="section-title">Často kladené otázky</h2>
@@ -538,7 +455,7 @@
             </div>
             <div class="faq-item">
               <h3>Používáte moderní technologie?</h3>
-              <p>Ano, pracujeme s nejnovějšími technologiemi jako React, Vue.js,
+              <p>Ano, pracujeme s nejnovějšími technologiemi jako
                 Node.js a dalšími. Všechny naše weby jsou
                 responzivní a optimalizované.</p>
             </div>
@@ -552,10 +469,6 @@
       </section>
 
       <section id="kontakt" class="contact">
-        <div class="section-bg">
-          <img src="https://picsum.photos/1200/800?random=10" alt
-            aria-hidden="true" loading="lazy">
-        </div>
         <div class="container contact-container">
           <div class="contact-info">
             <h2>Pojďme vytvořit něco <span
@@ -586,29 +499,15 @@
           </form>
         </div>
       </section>
-    </main>
 
-    <section id="newsletter" class="newsletter">
-      <div class="container">
-        <div class="newsletter-content">
-          <h2>Zůstaňte v obraze</h2>
-          <p>Přihlaste se k odběru novinek o webovém vývoju a našich
-            projektech</p>
-          <form class="newsletter-form" action="https://formspree.io/f/mbdzwwyl"
-            method="POST">
-            <input type="email" name="newsletter-email" placeholder="Váš e-mail"
-              required>
-            <button type="submit" class="btn btn-primary">Odebírat</button>
-          </form>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <footer>
       <div class="container footer-inner">
         <div class="footer-logo">
           <a href="#hero"><img src="img/Logo white.webp" alt="Volsi logo"
-              width="100" height="25" loading="lazy"></a>
+              width="100"
+              height="25" loading="lazy"></a>
         </div>
         <p>&copy; 2026 Volsi. Tvořeno studenty s vášní pro web.</p>
       </div>

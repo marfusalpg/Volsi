@@ -288,6 +288,25 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
+// --- LOGIKA PRO FAQ AKORDEON ---
+document.querySelectorAll('.faq-item').forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Volitelné: Zavřít ostatní otevřené otázky
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+            otherItem.classList.remove('active');
+        });
+
+        // Otevřít/zavřít aktuální
+        if (!isActive) {
+            item.classList.add('active');
+        }
+    });
+});
+
 // Uncomment to enable typing animation
 // const heroTitle = document.querySelector('.hero-title');
 // window.addEventListener('load', () => {
